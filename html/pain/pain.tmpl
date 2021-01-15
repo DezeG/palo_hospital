@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hospital Assistent</title>
+	</head>
+	<body>
+		<h3>Select severity level:<h3>
+			<div>{{ .illness }}</div> 
+		<div>
+			<a href="{{ .host }}/hospitals?level=1">1</a>
+			<a href="{{ .host }}/hospitals?level=2">2</a>
+			<a href="{{ .host }}/hospitals?level=3">3</a>
+			<a href="{{ .host }}/hospitals?level=4">4</a>
+			<a href="{{ .host }}/hospitals?level=5">5</a>
+		</div>
+	</body>
+</html>

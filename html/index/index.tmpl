@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hospital Assistent</title>
+	</head>
+	<body>
+		<h3>Select an illness:<h3>
+		{{ with .illnesses }}
+			{{ range . }}
+				<div><a href="{{ $.host }}/pain?illness={{ . }}">{{ . }}</a></div>
+			{{ end }} 
+		{{ end }}
+	</body>
+</html>

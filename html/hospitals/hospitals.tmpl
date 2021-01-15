@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Hospital Assistent</title>
+	</head>
+	<body>
+		<h3>Out suggested Hospitals<h3>
+		{{ with . }}
+			{{ range . }}
+				<div>{{ .Name }} Waiting time {{ .Wait }}</div>
+			{{ end }} 
+		{{ end }}
+	</body>
+</html>
