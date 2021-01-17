@@ -4,4 +4,6 @@
 
 `go build main.go`
 
+`./main`
+
 Now it is available on localhost
