@@ -1,7 +1,5 @@
 package middleware
 
-//I need to make two get requests
-
 import (
 	"log"
 	"io/ioutil"
@@ -10,7 +8,6 @@ import (
 	"encoding/json"
 	"../structs"
 )
-
 
 func Fetch_all_illnesses() []string {
 	endpoint := env.Illnesses_endpoint

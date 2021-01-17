@@ -21,7 +21,6 @@ func index(w http.ResponseWriter, r *http.Request) {
 		"host": r.Host,
 		"illnesses": illnesses,
 	}
-	fmt.Println(templ)
 	err := t.Execute(buf, templ)
 	if err != nil {
 		fmt.Println(err)
