@@ -15,3 +15,7 @@ func Pain(w http.ResponseWriter, r *http.Request) {
 func Hospitals(w http.ResponseWriter, r *http.Request) {
 	hospitals(w, r)
 }
+
+func New_patient(w http.ResponseWriter, r *http.Request) {
+	new_patient(w, r)
+}

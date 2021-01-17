@@ -2,16 +2,23 @@
 <html>
 	<head>
 		<title>Hospital Assistent</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 	</head>
 	<body>
-		<h3>Select severity level:<h3>
-			<div>{{ .illness }}</div> 
+		<h3><span class="label label-info">Select severity level</span><h3>
 		<div>
-			<a href="/hospitals?level=1">1</a>
-			<a href="/hospitals?level=2">2</a>
-			<a href="/hospitals?level=3">3</a>
-			<a href="/hospitals?level=4">4</a>
-			<a href="/hospitals?level=5">5</a>
+			<ul class="list-group">
+				<li class="list-group-item list-group-item-info"><h2>{{ .illness }}</h2></li>	
+				
+				<li class="list-group-item list-group-item-info">
+					<a href="/hospitals?illness={{ .illness }}&level=0"><i class="far fa-grin-alt fa-2x"></i></a>
+					<a href="/hospitals?illness={{ .illness }}&level=1"><i class="far fa-smile-beam fa-2x"></i></a>
+					<a href="/hospitals?illness={{ .illness }}&level=2"><i class="far fa-meh fa-2x"></i></a>
+					<a href="/hospitals?illness={{ .illness }}&level=3"><i class="far fa-frown fa-2x"></i></a>
+					<a href="/hospitals?illness={{ .illness }}&level=4"><i class="far fa-sad-tear fa-2x"></i></a>
+				</li>
+			</ul>
 		</div>
 	</body>
 </html>

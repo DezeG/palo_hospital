@@ -2,13 +2,18 @@
 <html>
 	<head>
 		<title>Hospital Assistent</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 	</head>
 	<body>
-		<h3>Select an illness:<h3>
-		{{ with .illnesses }}
-			{{ range . }}
-				<div><a href="/pain?illness={{ . }}">{{ . }}</a></div>
-			{{ end }} 
-		{{ end }}
+		<h3><span class="label label-info">Select an illness</span><h3>
+		<div>
+			<ul class="list-group">
+				{{ with .illnesses }}
+					{{ range . }}
+						<a href="/pain?illness={{ . }}"><li class="list-group-item list-group-item-info">{{ . }}</li></a>
+					{{ end }} 
+				{{ end }}
+			</ul>
+		</div>
 	</body>
 </html>

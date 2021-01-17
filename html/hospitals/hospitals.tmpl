@@ -2,13 +2,18 @@
 <html>
 	<head>
 		<title>Hospital Assistent</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 	</head>
 	<body>
-		<h3>Out suggested Hospitals<h3>
-		{{ with . }}
-			{{ range . }}
-				<div>{{ .Name }} Waiting time {{ .Wait }}</div>
-			{{ end }} 
-		{{ end }}
+		<h3><span class="label label-info">Out suggested Hospitals</span><h3>
+		<div>
+			<ul class="list-group">
+			{{ with .wait_time }}
+				{{ range . }}
+					<a href="/new_patient?illness={{ $.illness }}&level={{ $.pain_level }}&hospital={{ .Name }}"><li class="list-group-item list-group-item-info">{{ .Name }} <span class="badge">Waiting time {{ .Wait }}</span></li></a>
+				{{ end }} 
+			{{ end }}
+			</ul>
+		</div>
 	</body>
 </html>
